@@ -1,4 +1,4 @@
-#Ecoleta
+Ecoleta
 
 Aplicação desenvolvida durante a semana Next Level Week da rocketseat.
 
@@ -7,7 +7,7 @@ Aplicação desenvolvida durante a semana Next Level Week da rocketseat.
 
 ------------
 
-###- Tecnologias utilizadas:
+- Tecnologias utilizadas:
 - Node js
 - HTML5
 - CSS3
@@ -15,16 +15,16 @@ Aplicação desenvolvida durante a semana Next Level Week da rocketseat.
 
 também foi utilizado dependencias como o express e a view engine nunjucks
 
-###Página Home
+Página Home
 
 ![home](https://user-images.githubusercontent.com/59545660/83950799-b7308500-a803-11ea-857f-19db07102b7a.png)
 
 
-###Página de Cadastro
+Página de Cadastro
 
 ![cadastro](https://user-images.githubusercontent.com/59545660/83950808-cd3e4580-a803-11ea-97d4-71961fb23f03.png)
 
-###Página de resultados
+Página de resultados
 
 ![results](https://user-images.githubusercontent.com/59545660/83950816-dd562500-a803-11ea-96f3-72b6b17bc012.png)
 
