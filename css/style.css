@@ -7,7 +7,8 @@
 }
 :root {
     --title-color: #322153;
-    --primary-color: #34cb79
+    --primary-color: #34cb79;
+    --secondary-color: #f0f0f5;
 }
 a{
     color: var(--title-color);
@@ -17,7 +18,7 @@ h1,h2,h3,h4,h5,h6{
     font-family: 'Ubuntu', sans-serif;
 }
 body{
-    background-color: #f0f0f5;
+    background-color: var(--secondary-color);
     -webkit-font-smoothing: antialiased;
 }
 

@@ -7,8 +7,9 @@
     <!--Links CSS e fontes -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/responsive.css">
     <title>Ecoleta</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
         <div class="container">
             <header>
                 <img src="./assets/logo.svg" alt="Logomarca">
-                <a href="#">
+                <a href="create-point.html">
                     <span></span>
                     Cadastre um ponto de coleta
                 </a>
@@ -35,5 +36,24 @@
 
     </div><!--page-home-->
 
+    <div id="modal" class="hide">
+        <div class="content">
+            <div class="header">
+                <h1>Pontos de Coleta</h1>
+                <a href="#">Fechar</a>
+            </div><!--header-->
+            <form action="./search-results.html">
+                <label for="search">Cidade</label>
+                <div class="search field">
+                    <input type="text" name="search" placeholder="Cidade">
+                    <button>
+                        <img src="./assets/search.svg" alt="Buscaar">
+                    </button>
+                </div><!--search-->
+            </form>
+        </div><!--content-->
+    </div><!--modal-->
+
+    <script src="./src/index.js"></script>
 </body>
 </html>

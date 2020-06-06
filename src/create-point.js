@@ -27,11 +27,14 @@ async function getCities(event){
 
     const url = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufValue}/municipios`)
 
+    citySelect.innerHTML = '<option value>Selecione a Cidade</option>'
+    citySelect.disabled = true
+
     await url.json()
 
     .then(cities => {
         for(city of cities){
-            citySelect.innerHTML += `<option value="${city.id}">${city.nome}</option>`
+            citySelect.innerHTML += `<option value="${city.nome}">${city.nome}</option>`
         }
 
         citySelect.disabled = false
@@ -40,3 +43,50 @@ async function getCities(event){
 
 document.querySelector('select[name=uf]')
 .addEventListener("change", getCities)
+
+
+// Ítens de coleta
+
+const itemsToCollect = document.querySelectorAll('.items-grid li')
+
+for(let item of itemsToCollect){
+    item.addEventListener('click', handleSelectedItem)
+}
+
+
+const collectedItems = document.querySelector('input[name=items]')
+
+let selectedItems = []
+
+function handleSelectedItem(event){
+    const itemLi = event.target
+
+    // adicionar ou remover classes
+    itemLi.classList.toggle('selected')
+
+    const itemId = itemLi.dataset.id
+
+    
+    // verificar se existe item selecionado se sim, pegar os itens
+    const alreadySelected = selectedItems.findIndex(item => {
+        const itemFound = item == itemId // Boolean
+        return itemFound
+    })
+
+    // se ja estiver selecionado, tirar da seleção
+    if(alreadySelected >= 0){
+        const filteredItems = selectedItems.filter(item => {
+            const itemIsDifferent = item != itemId
+            return itemIsDifferent
+        })
+        
+        selectedItems = filteredItems
+    }else{
+        // se nao estiver selecionado adicionar a seleção
+        selectedItems.push(itemId)
+    }
+
+    // atualizar o campo escondido com os itens selecionados
+    collectedItems.value = selectedItems
+
+}
